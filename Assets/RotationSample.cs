@@ -10,6 +10,8 @@ namespace DefaultNamespace
         [SerializeField] private Transform[] a;
         [SerializeField] private Transform[] b;
 
+        public Transform aParent;
+
 
         private void Start()
         {
@@ -26,6 +28,24 @@ namespace DefaultNamespace
             
             var (r1, r2) = estimator.GetTransformationMatrixes();
             Debug.Log(ConvertToUnityMatrix(r2));
+            AdjustParent();
+        }
+
+        private void AdjustParent()
+        {
+            var tempG = Vector3.zero;
+            foreach (var v in a)
+            {
+                tempG += v.position;
+            }
+
+            var g = tempG / a.Length;
+            var x = a[0].position - g;
+            var y = Vector3.Cross( a[1].position - g,x);
+            var z = Vector3.Cross(y, x);
+            aParent.transform.position = g;
+            var newRotation = Quaternion.LookRotation(z, y);
+            aParent.transform.rotation = newRotation;
         }
 
         private Matrix4x4 ConvertToUnityMatrix(double[,] rawMatrix)

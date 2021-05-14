@@ -1,0 +1,13 @@
+﻿# デフォルトの無視ファイル
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/.idea.Calibration Sample.iml
+/contentModel.xml
+/projectSettingsUpdater.xml
+# データソースのローカルストレージがファイルを無視しました
+/../../../../../../../../../:\Users\yasuhide-hirohata\Desktop\UnityProjects\Calibration Sample\.idea\.idea.Calibration Sample\.idea/dataSources/
+/dataSources.local.xml
+# エディターベースの HTTP クライアントリクエスト
+/httpRequests/
