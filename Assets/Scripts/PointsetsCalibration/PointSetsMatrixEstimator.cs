@@ -1,6 +1,6 @@
 using MathNet.Numerics.LinearAlgebra;
 
-namespace DefaultNamespace
+namespace PointsetsCalibration
 {
     public class PointSetsMatrixEstimator
     {

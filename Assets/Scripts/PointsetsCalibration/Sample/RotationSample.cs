@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace PointsetsCalibration.Sample
 {
     public class RotationSample : MonoBehaviour
     {
